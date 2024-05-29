@@ -38,9 +38,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "76c0538455bc04d354c9da43533a4f30
 "assets/assets/images/Rexvin-Fighting.png": "596952ec8024c32bfde7968344203188",
 "assets/assets/images/Rexvin-Hi.png": "9dfbef114a93e8310c58d5f490ade943",
 "assets/FontManifest.json": "5a32d4310a6f5d9a6b651e75ba0d7372",
-"assets/fonts/MaterialIcons-Regular.otf": "b3cc195e2b4bd38ffef6c74eca2f93a6",
-"assets/NOTICES": "27dc719ab0cf8dee94d4f3d1958b7da6",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "e986ebe42ef785b27164c36a9abc7818",
+"assets/fonts/MaterialIcons-Regular.otf": "a6aebe453b1d36085cf83ca97adff41e",
+"assets/NOTICES": "f3b7c4d59c978864ca76da6d51b134ac",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "89ed8f4e49bcdfc0b5bfc9b24591e347",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "eeefad5512dfbffba365ff0cde4d6e6f",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "f3307f62ddff94d2cd8b103daf8d1b0f",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "04f83c01dded195a11d21c2edf643455",
@@ -61,11 +61,12 @@ const RESOURCES = {"assets/AssetManifest.bin": "76c0538455bc04d354c9da43533a4f30
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "157aff4a1172d00f8db6c812989b33fc",
-"/": "157aff4a1172d00f8db6c812989b33fc",
-"main.dart.js": "c9577a258817c09a4eb479dcde55eb1c",
+"icons/rels-gold.png": "a9b4d470dca3c50620c02b4fb807060c",
+"index.html": "dfa501ac030371bbb1127d5b8cfd97ab",
+"/": "dfa501ac030371bbb1127d5b8cfd97ab",
+"main.dart.js": "e058d386e953c81805abadb0b7a4490c",
 "manifest.json": "95301fe995e8bbe8f9b4b48db7d40797",
-"version.json": "710ffbbe5785b99c0d936e51cde53536"};
+"version.json": "25203ce87bf844439203716f65f76a41"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
