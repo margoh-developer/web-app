@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/">
+  <base href="/" />
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -25,22 +25,30 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="rels">
-  <link rel="apple-touch-icon" href="/icons/Icon-192.png">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/icons/rels-transparent-gold.png"/>
+  <link rel="icon" type="image/png" href="icons/rels-transparent-gold.png"/>
 
-  <title>rels</title>
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "653009715";
+    const serviceWorkerVersion = "1205874998";
   </script>
   <!-- This script adds the flutter initialization JS code -->
-  <script src="/flutter.js" defer></script>
+  <script src="flutter.js" defer></script>
 </head>
 <body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('firebase-messaging-sw.js').then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }).catch((err) => {
+        console.error('Service Worker registration failed:', err);
+      });
+    }
+  </script>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
@@ -56,5 +64,44 @@
       });
     });
   </script>
+   <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-messaging-compat.js"></script>
+   <script>
+     // Replace with your Firebase configuration object
+     const firebaseConfig = {
+       apiKey: "AIzaSyChV_lPIENi_gCpPRaZdNZa3y2SK5g_AYo",
+   authDomain: "rexvin-leads-system.firebaseapp.com",
+   projectId: "rexvin-leads-system",
+   storageBucket: "rexvin-leads-system.appspot.com",
+   messagingSenderId: "341856894755",
+   appId: "1:341856894755:web:60bf1ddd8a14f88c63d696",
+   measurementId: 'G-TYDTHFFC5N',
+     };
+
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+   
+     // Initialize Firebase Messaging
+     const messaging = firebase.messaging();
+   
+     // Request permission to send notifications
+     messaging
+       .requestPermission()
+       .then(() => {
+         console.log("Notification permission granted.");
+         return messaging.getToken();
+       })
+       .then((token) => {
+         console.log("FCM Token:", token);
+       })
+       .catch((error) => {
+         console.error("Error getting FCM token:", error);
+       });
+   
+     // Handle background messages
+     messaging.onBackgroundMessage((payload) => {
+       console.log("Background message received:", payload);
+     });
+   </script>
 </body>
 </html>
