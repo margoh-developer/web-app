@@ -34,12 +34,15 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1205874998";
+    const serviceWorkerVersion = "1990985281";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <script type ="text/javascript">
+    window.flutterWebRenderer = "html";
+  </script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('firebase-messaging-sw.js').then((registration) => {
