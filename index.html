@@ -34,15 +34,16 @@
 
     <script>
       // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = "4080831028";
+      const serviceWorkerVersion = "1285377139";
+    </script>
+     <script type ="text/javascript">
+      window.flutterWebRenderer = "canvaskit";
     </script>
     <!-- This script adds the flutter initialization JS code -->
     <script src="/flutter.js" defer></script>
   </head>
   <body>
-    <script type ="text/javascript">
-      window.flutterWebRenderer = "canvaskit";
-    </script>
+   
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/firebase-messaging-sw.js').then((registration) => {
